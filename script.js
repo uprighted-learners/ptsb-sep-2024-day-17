@@ -69,3 +69,25 @@ carMakes.forEach((make) => {
             break;
     }
 });
+
+// map example
+let carMakesUpperCase = carMakes.map((make) => {
+    return make.toUpperCase();
+})
+console.log("carMakes:", carMakes);
+
+console.log("carMakesUpperCase:", carMakesUpperCase);
+
+// map and forEach together example
+let carModels = carMakes.map((make) => {
+    let models = [];
+
+    // use a forEach inside the map
+    ["Model A", "Model B", "Model C"].forEach((model) => {
+        models.push(`${make} ${model}`);
+    });
+
+    return models;
+})
+
+console.log("carModels:", carModels);
