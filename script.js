@@ -20,12 +20,13 @@ console.log("new list after shift:", carMakes);
 // find the index of a car make in the list
 let indexOfHonda = carMakes.indexOf("Honda");
 console.log("index of Honda:", indexOfHonda);
+console.log(carMakes[indexOfHonda])
 
 // add "Nissan" to the 3rd position in the list
 carMakes.splice(2, 0, "Nissan");
 console.log("new list after splice:", carMakes);
 
-// does the list include "Ford"? TRUE / FALSE
+// does the list include "Ford"? ***TRUE / FALSE***
 let includesFord = carMakes.includes("Ford");
 console.log("includes Ford:", includesFord);
 
@@ -91,3 +92,24 @@ let carModels = carMakes.map((make) => {
 })
 
 console.log("carModels:", carModels);
+
+// filter example
+let numbers = [1, 3, 8, 4, 5, 2, 10, 7, 6, 9];
+console.log("numbers:", numbers);
+const result = numbers.filter((element, index, array) => {
+    console.log(`Element: ${element}, Index: ${index}, Array: [${array}]`);
+    return element > index; // Keep the element if it's greater than its index
+});
+console.log("result:", result);
+
+// reduce example
+let example = [5, "string", true, {
+    name: "John",
+    age: 30
+}, [1, "hello", false]]
+let nums = [654, 132, 987, 456, 789, 246, 852, 369, 159, 753];
+let sum = nums.reduce((total, num) => {
+    return total + num;
+})
+
+console.log("sum of nums:", sum);
